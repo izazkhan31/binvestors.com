@@ -1,104 +1,60 @@
-/* Withdrawal Container Styles */
 /* Navbar styles */
 .navbar {
-    background-color: #007bff; /* Blue background color */
-    padding: 15px; /* Padding around the navbar */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+    background-color: #007bff;
+    padding: 10px;
+    text-align: center;
 }
 
 .navbar ul {
-    list-style-type: none; /* Remove bullet points from list */
-    margin: 0; /* Remove default margin */
-    padding: 0; /* Remove default padding */
-    display: flex; /* Use flexbox for horizontal layout */
-    justify-content: center; /* Center the items */
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
 }
 
 .navbar ul li {
-    margin: 0 20px; /* Spacing between items */
+    display: inline;
+    margin: 0 15px;
 }
 
 .navbar ul li a {
-    color: white; /* Text color */
-    text-decoration: none; /* Remove underline */
-    font-weight: bold; /* Bold text */
-    font-size: 18px; /* Text size */
-    transition: color 0.3s; /* Smooth transition for hover effect */
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
 }
 
 .navbar ul li a:hover {
-    color: #f4f4f4; /* Lighter color on hover */
-    text-shadow: 0 0 5px rgba(255, 255, 255, 0.5); /* Optional: subtle text glow on hover */
+    color: #f4f4f4;
 }
 
-.navbar ul li a.active {
-    border-bottom: 2px solid #f4f4f4; /* Underline for the active link */
+/* Plans styles */
+.plans-container {
+    padding: 50px;
+    text-align: center;
 }
 
-.withdrawal-container {
-    max-width: 600px; /* Limit the width of the container */
-    margin: 20px auto; /* Center the container */
-    padding: 20px; /* Padding around the content */
-    border: 1px solid #ddd; /* Border around the container */
-    border-radius: 8px; /* Rounded corners */
-    background-color: #f9f9f9; /* Light background color */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+h1 {
+    margin-bottom: 40px;
+    color: #333;
 }
 
-/* Form Styles */
-.withdrawal-container form {
-    display: flex; /* Use flexbox for form layout */
-    flex-direction: column; /* Stack items vertically */
+.plan {
+    background-color: #f9f9f9;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
 }
 
-.withdrawal-container label {
-    margin: 10px 0 5px; /* Spacing for labels */
+.plan h2 {
+    color: #007bff;
+    margin-bottom: 10px;
 }
 
-.withdrawal-container input[type="text"],
-.withdrawal-container input[type="number"] {
-    padding: 10px; /* Padding inside input fields */
-    border: 1px solid #ccc; /* Border for input fields */
-    border-radius: 4px; /* Rounded corners for input fields */
-    font-size: 16px; /* Font size for input fields */
-}
-
-.withdrawal-container button {
-    padding: 10px; /* Padding inside the button */
-    margin-top: 10px; /* Space above the button */
-    background-color: #007bff; /* Button background color */
-    color: white; /* Button text color */
-    border: none; /* Remove border */
-    border-radius: 4px; /* Rounded corners for the button */
-    font-size: 16px; /* Font size for the button */
-    cursor: pointer; /* Pointer cursor on hover */
-    transition: background-color 0.3s; /* Smooth background color transition */
-}
-
-.withdrawal-container button:hover {
-    background-color: #0056b3; /* Darker blue on hover */
-}
-
-/* Withdrawal History Table Styles */
-#withdrawalHistory {
-    margin-top: 20px; /* Space above the table */
-    width: 100%; /* Full width of the container */
-    border-collapse: collapse; /* Collapse borders */
-}
-
-#withdrawalHistory th, #withdrawalHistory td {
-    padding: 10px; /* Padding in table cells */
-    border: 1px solid #ddd; /* Border for table cells */
-    text-align: left; /* Align text to the left */
-}
-
-#withdrawalHistory th {
-    background-color: #007bff; /* Header background color */
-    color: white; /* Header text color */
-}
-
-#withdrawalHistory tbody tr:hover {
-    background-color: #f1f1f1; /* Highlight row on hover */
+.plan p {
+    font-size: 18px;
+    margin: 5px 0;
 }
 /* General Styles for Larger Screens (Desktop and Tablet) */
 body {
