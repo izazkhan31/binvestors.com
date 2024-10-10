@@ -1,0 +1,172 @@
+/* Navbar styles */
+.navbar {
+    background-color: #007bff;
+    padding: 10px;
+    text-align: center;
+}
+
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.navbar ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+.navbar ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.navbar ul li a:hover {
+    color: #f4f4f4;
+}
+
+/* Dashboard styles */
+.dashboard-container {
+    padding: 50px;
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: 40px;
+    color: #333;
+}
+
+.investment-details {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.detail {
+    background-color: #f9f9f9;
+    padding: 20px;
+    width: 200px;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+}
+
+.detail h3 {
+    color: #007bff;
+    margin-bottom: 10px;
+}
+
+.detail p {
+    font-size: 20px;
+    font-weight: bold;
+}
+/* General Styles for Larger Screens (Desktop and Tablet) */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar ul {
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+}
+
+.navbar ul li {
+    list-style: none;
+}
+
+.navbar ul li a {
+    padding: 10px 20px;
+    text-decoration: none;
+    color: white;
+    background-color: #007bff;
+    border-radius: 5px;
+}
+
+/* MEDIA QUERY FOR MOBILE SCREENS */
+@media (max-width: 768px) {
+    /* Navbar adjustments for mobile */
+    .navbar ul {
+        flex-direction: column; /* Stack items vertically */
+        text-align: center;
+        padding: 0;
+    }
+
+    .navbar ul li {
+        margin: 10px 0;
+    }
+
+    .navbar ul li a {
+        padding: 10px 15px;
+        font-size: 16px;
+    }
+
+    /* General body padding */
+    body {
+        padding: 10px;
+    }
+
+    /* Make content full-width on smaller screens */
+    .about-container,
+    .plans-container,
+    .dashboard-container,
+    .contact-container {
+        width: 100%;
+        padding: 10px;
+    }
+
+    /* Adjust form fields */
+    input[type="text"],
+    input[type="email"],
+    input[type="number"],
+    textarea {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 10px;
+        font-size: 16px;
+    }
+
+    /* Button adjustments */
+    button {
+        width: 100%;
+        padding: 10px;
+        font-size: 18px;
+    }
+}
+
+/* Additional media queries for very small screens (like iPhone SE) */
+@media (max-width: 576px) {
+    .navbar ul {
+        padding: 0;
+        text-align: left; /* Align text left for very small screens */
+    }
+
+    .navbar ul li a {
+        font-size: 14px;
+        padding: 8px 12px;
+    }
+
+    /* Further reduce font size for smaller screens */
+    body {
+        font-size: 14px;
+    }
+
+    /* Smaller inputs */
+    input[type="text"],
+    input[type="email"],
+    input[type="number"],
+    textarea {
+        padding: 8px;
+    }
+
+    /* Reduce button size */
+    button {
+        padding: 8px;
+        font-size: 16px;
+    }
+}
