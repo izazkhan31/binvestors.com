@@ -1,4 +1,4 @@
-/* Deposit Page Styles */
+/* Contact Container Styles */
 /* Navbar styles */
 .navbar {
     background-color: #007bff; /* Blue background color */
@@ -34,49 +34,54 @@
 .navbar ul li a.active {
     border-bottom: 2px solid #f4f4f4; /* Underline for the active link */
 }
-
-.deposit-container {
-    padding: 50px;
-    text-align: center;
+.contact-container {
+    max-width: 600px; /* Limit the width of the container */
+    margin: 20px auto; /* Center the container */
+    padding: 20px; /* Padding around the content */
+    border: 1px solid #ddd; /* Border around the container */
+    border-radius: 8px; /* Rounded corners */
+    background-color: #f9f9f9; /* Light background color */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
 }
 
-h1 {
-    margin-bottom: 20px;
-    color: #333;
+/* Form Styles */
+.contact-container form {
+    display: flex; /* Use flexbox for form layout */
+    flex-direction: column; /* Stack items vertically */
 }
 
-h2 {
-    margin-top: 40px;
-    color: #007bff;
+.contact-container label {
+    margin: 10px 0 5px; /* Spacing for labels */
 }
 
-label {
-    display: block;
-    margin: 15px 0 5px;
-    font-size: 16px;
+.contact-container input[type="text"],
+.contact-container input[type="email"],
+.contact-container textarea {
+    padding: 10px; /* Padding inside input fields */
+    border: 1px solid #ccc; /* Border for input fields */
+    border-radius: 4px; /* Rounded corners for input fields */
+    font-size: 16px; /* Font size for input fields */
 }
 
-input[type="number"],
-input[type="text"],
-select {
-    padding: 10px;
-    width: 300px;
-    margin-bottom: 20px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
+.contact-container button {
+    padding: 10px; /* Padding inside the button */
+    margin-top: 10px; /* Space above the button */
+    background-color: #007bff; /* Button background color */
+    color: white; /* Button text color */
+    border: none; /* Remove border */
+    border-radius: 4px; /* Rounded corners for the button */
+    font-size: 16px; /* Font size for the button */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s; /* Smooth background color transition */
 }
 
-button {
-    background-color: #007bff;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
+.contact-container button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
 }
 
-button:hover {
-    background-color: #0056b3;
+/* Contact Info Styles */
+.contact-info {
+    margin-bottom: 20px; /* Space below the contact info section */
 }
 /* General Styles for Larger Screens (Desktop and Tablet) */
 body {
