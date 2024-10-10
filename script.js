@@ -1,20 +1,62 @@
-// Plan details
-const plans = [
-    { amount: 500, dailyReturn: 0.15, days: 30 },
-    { amount: 1000, dailyReturn: 0.15, days: 30 },
-    { amount: 1500, dailyReturn: 0.15, days: 30 },
-    { amount: 2000, dailyReturn: 0.15, days: 30 },
-    // Add up to 10 plans
-];
+document.getElementById('depositForm').addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevent the default form submission
 
-// Function to calculate total income
-function calculateTotalIncome(amount, dailyReturn, days) {
-    return amount + (amount * dailyReturn * days);
+    // Here, you can handle form submission (e.g., send data to the server or log it)
+    const amount = document.getElementById('sendingAmount').value;
+    const senderName = document.getElementById('senderName').value;
+    const senderNumber = document.getElementById('senderNumber').value;
+    const trxId = document.getElementById('trxId').value;
+    const receipt = document.getElementById('receipt').files[0];
+
+    // You can perform actions like sending data to a server here
+
+    alert(`Deposit submitted:\nAmount: PKR ${amount}\nName: ${senderName}\nNumber: ${senderNumber}\nTRX ID: ${trxId}`);
+});
+// Function to update deposit history table
+function updateDepositHistory() {
+    const depositHistory = JSON.parse(localStorage.getItem('depositHistory')) || [];
+    const tbody = document.querySelector('#depositHistory tbody');
+    tbody.innerHTML = ''; // Clear existing rows
+
+    depositHistory.forEach(record => {
+        const row = document.createElement('tr');
+        row.innerHTML = `
+            <td>${record.dateTime}</td>
+            <td>${record.easypaisaName}</td>
+            <td>${record.easypaisaNumber}</td>
+            <td>${record.amount}</td>
+        `;
+        tbody.appendChild(row);
+    });
 }
 
-// Display total income for each plan
-document.getElementById('total1').innerText = calculateTotalIncome(plans[0].amount, plans[0].dailyReturn, plans[0].days).toFixed(2);
-document.getElementById('total2').innerText = calculateTotalIncome(plans[1].amount, plans[1].dailyReturn, plans[1].days).toFixed(2);
-document.getElementById('total3').innerText = calculateTotalIncome(plans[2].amount, plans[2].dailyReturn, plans[2].days).toFixed(2);
-document.getElementById('total4').innerText = calculateTotalIncome(plans[3].amount, plans[3].dailyReturn, plans[3].days).toFixed(2);
-// Add similar lines for the remaining plans
+// Call update function on page load
+updateDepositHistory();
+document.getElementById('depositForm').addEventListener('submit', function(e) {
+    e.preventDefault(); // Prevent form submission
+
+    // Get form values
+    const easypaisaName = document.getElementById('easypaisaName').value;
+    const easypaisaNumber = document.getElementById('easypaisaNumber').value;
+    const depositAmount = document.getElementById('depositAmount').value;
+
+    // Create deposit record
+    const depositRecord = {
+        dateTime: new Date().toLocaleString(),
+        easypaisaName: easypaisaName,
+        easypaisaNumber: easypaisaNumber,
+        amount: depositAmount,
+    };
+
+    // Save deposit record to local storage
+    const depositHistory = JSON.parse(localStorage.getItem('depositHistory')) || [];
+    depositHistory.push(depositRecord);
+    localStorage.setItem('depositHistory', JSON.stringify(depositHistory));
+
+    // Reset the form
+    document.getElementById('depositForm').reset();
+
+    // Update deposit history table
+    updateDepositHistory();
+});
+

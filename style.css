@@ -1,60 +1,82 @@
+/* Deposit Page Styles */
 /* Navbar styles */
 .navbar {
-    background-color: #007bff;
-    padding: 10px;
-    text-align: center;
+    background-color: #007bff; /* Blue background color */
+    padding: 15px; /* Padding around the navbar */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
 }
 
 .navbar ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
+    list-style-type: none; /* Remove bullet points from list */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    display: flex; /* Use flexbox for horizontal layout */
+    justify-content: center; /* Center the items */
 }
 
 .navbar ul li {
-    display: inline;
-    margin: 0 15px;
+    margin: 0 20px; /* Spacing between items */
 }
 
 .navbar ul li a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 18px;
+    color: white; /* Text color */
+    text-decoration: none; /* Remove underline */
+    font-weight: bold; /* Bold text */
+    font-size: 18px; /* Text size */
+    transition: color 0.3s; /* Smooth transition for hover effect */
 }
 
 .navbar ul li a:hover {
-    color: #f4f4f4;
+    color: #f4f4f4; /* Lighter color on hover */
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.5); /* Optional: subtle text glow on hover */
 }
 
-/* Plans styles */
-.plans-container {
+.navbar ul li a.active {
+    border-bottom: 2px solid #f4f4f4; /* Underline for the active link */
+}
+
+.deposit-container {
     padding: 50px;
     text-align: center;
 }
 
 h1 {
-    margin-bottom: 40px;
+    margin-bottom: 20px;
     color: #333;
 }
 
-.plan {
-    background-color: #f9f9f9;
-    padding: 20px;
-    margin: 20px;
-    border-radius: 10px;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
-}
-
-.plan h2 {
+h2 {
+    margin-top: 40px;
     color: #007bff;
-    margin-bottom: 10px;
 }
 
-.plan p {
-    font-size: 18px;
-    margin: 5px 0;
+label {
+    display: block;
+    margin: 15px 0 5px;
+    font-size: 16px;
+}
+
+input[type="number"],
+input[type="text"],
+select {
+    padding: 10px;
+    width: 300px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
 }
 /* General Styles for Larger Screens (Desktop and Tablet) */
 body {
